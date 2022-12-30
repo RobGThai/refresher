@@ -21,7 +21,7 @@ def find_in_grid(grid: List[List[str]], word: str) -> List[Tuple[int, int]]:
     max_width = len(grid[0])
     print_debug(f"Max height[{max_height}] width[{max_width}]")
 
-    # Find first character
+    # Find first character to simplify the actual path finding
     first_chars = []
     while y < max_height:
         x = 0
@@ -46,6 +46,9 @@ def find_in_grid(grid: List[List[str]], word: str) -> List[Tuple[int, int]]:
     return result
 
 def check_and_move(grid: List[List[str]], word: str, pos: int, x: int, y: int):
+    """
+    Check for matched character and move down using DFS(recurse).
+    """
     max_height = len(grid)
     max_width = len(grid[0])
     if x >= max_width or y >= max_height or pos >= len(word):
