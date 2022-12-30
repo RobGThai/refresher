@@ -79,7 +79,8 @@ if __name__ == "__main__":
     c1 = Case(g, "ART", [(0, 0), (0, 1), (1, 1)])
     c2 = Case(g, "ATTACK", [(0, 0), (1, 0), (1, 1), (2, 1), (2, 2), (3, 2)])
     c3 = Case(g, "VOLT", [(3, 0), (3, 1), (4, 1), (4, 2)])
-    cases = [c1, c2, c3]
+    c4 = Case(g, "VOAR", [])
+    cases = [c1, c2, c3, c4]
     for c in cases:
         result = find_in_grid(c.grid, c.word)
         print(f"case[{c.word}] {'PASS' if result == c.expect else 'FAIL'} Expect:<{c.expect}> Got:<{result}>")
