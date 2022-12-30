@@ -1,4 +1,5 @@
 import heapq
+from collections import List
 
 class MatItem:
     def __init__(self, mat: List[int], total: int, position: int):
